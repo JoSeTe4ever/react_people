@@ -1,0 +1,11 @@
+.navbar {
+    background-color: purple;
+    height: 100px;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
