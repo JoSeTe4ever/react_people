@@ -1,0 +1,23 @@
+.searchContainer {
+    width: 30%;
+    position: relative;
+    top: 70%;
+    left: 36%;
+}
+
+.searchTerm {
+    float: left;
+    width: 100%;
+    border: 3px solid #00B4CC;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+button.searchButton {
+    position: relative;
+    top: -30px;
+    left: 49%;
+}

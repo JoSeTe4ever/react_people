@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import './Header.css';
 
 class Header extends Component {
+
     constructor(props) {
         super(props);
         this.state = {};
+        let currenttime = new Date();
     };
 
     static defaultProps = {}
