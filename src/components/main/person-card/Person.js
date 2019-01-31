@@ -9,6 +9,7 @@ const Person = (props) => {
             <div className="container">
                 <h4><b>{person.name}</b></h4>
                 <p>{person.address}</p>
+                <input type={"checkbox"} onChange={() => props.handleCheckboxChange(props.person._id)}></input>
             </div>
         </div>
     )

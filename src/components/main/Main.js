@@ -8,7 +8,8 @@ class Main extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {people: peopleData};
+        this.state = {people: peopleData, favouritePeople: []};
+        this.filterPeople = this.filterPeople
     };
 
     static defaultProps = {};
@@ -27,7 +28,8 @@ class Main extends Component {
 
     render() {
 
-        this.peopleCardsComponents = this.state.people.map(person => <Person person={person} key={person.id}/>);
+        this.peopleCardsComponents = this.state.people.map(person => <Person person={person} key={person._id}
+                                                                             handleCheckboxChange={this.handleCheckboxChange}/>);
 
         return (
             <div>
@@ -55,6 +57,24 @@ class Main extends Component {
     }
 
     componentDidCatch(error, info) {
+    }
+
+    handleCheckboxChange(id) {
+        this.setState(prevState => {
+            const isFavorite = this.prevState.favouritePeople.some((elem) => elem._id == id);
+            const selectedElem = this.prevState.favouritePeople.filter((elem) => elem._id == id);
+
+            if (!isFavorite && selectedElem) {
+                this.prevState.favouritePeople.push(selectedElem);
+            } else {
+                this.prevState.favouritePeople.splice(selectedElem);
+            }
+
+        });
+        console.log("selected " + id);
+    }
+
+    filterPeople() {
     }
 }
 
