@@ -9,7 +9,8 @@ class Main extends Component {
         super(props);
 
         this.state = {people: peopleData, favouritePeople: []};
-        this.filterPeople = this.filterPeople
+        this.filterPeople = this.filterPeople.bind(this);
+        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     };
 
     static defaultProps = {};
@@ -28,13 +29,13 @@ class Main extends Component {
 
     render() {
 
-        this.peopleCardsComponents = this.state.people.map(person => <Person person={person} key={person._id}
+        this.peopleCardsComponents = this.state.people.map(person => <Person person={person}
+                                                                             key={person._id}
                                                                              handleCheckboxChange={this.handleCheckboxChange}/>);
-
         return (
             <div>
                 <h3>This is my main element</h3>
-                <SearchBar placeholder="Type here" onSearchTermChange={term => console.log("search " + term)}/>
+                <SearchBar placeholder="Type here" onSearchTermChange={term => this.filterPeople(term)}/>
                 <div className="container">
                     <div className="peopleDataContainer">
                         {this.peopleCardsComponents.slice(0, 5)}
@@ -61,17 +62,16 @@ class Main extends Component {
 
     handleCheckboxChange(id) {
         this.setState(prevState => {
-            const isFavorite = this.prevState.favouritePeople.some((elem) => elem._id == id);
-            const selectedElem = this.prevState.favouritePeople.filter((elem) => elem._id == id);
+            const isFavorite = prevState.favouritePeople.some((elem) => elem._id === id);
+            const selectedElem = prevState.favouritePeople.filter((elem) => elem._id === id);
 
             if (!isFavorite && selectedElem) {
-                this.prevState.favouritePeople.push(selectedElem);
+                prevState.favouritePeople.push(selectedElem);
             } else {
-                this.prevState.favouritePeople.splice(selectedElem);
+                prevState.favouritePeople.splice(selectedElem);
             }
-
+            return prevState;
         });
-        console.log("selected " + id);
     }
 
     filterPeople() {
