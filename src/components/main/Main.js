@@ -7,7 +7,6 @@ import SearchBar from "./search-bar/SearchBar";
 class Main extends Component {
     constructor(props) {
         super(props);
-
         this.state = {people: peopleData, favouritePeople: []};
         this.filterPeople = this.filterPeople.bind(this);
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
