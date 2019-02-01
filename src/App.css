@@ -38,3 +38,16 @@
 p.todo-description {
   display: inline;
 }
+
+
+
+h3.app-footer{
+  background-color: purple;
+  height: 100px;
+  color: whitesmoke;
+  text-align: center;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+}

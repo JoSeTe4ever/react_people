@@ -23,7 +23,7 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-                <h3>This is my footer element</h3>
+                <h3 className="app-footer">This is my footer element</h3>
             </footer>
         );
     }
