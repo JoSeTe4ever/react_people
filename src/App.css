@@ -40,12 +40,11 @@ p.todo-description {
 }
 
 h3.app-footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: purple;
-  height: 100px;
-  color: whitesmoke;
+  color: white;
   text-align: center;
-  display: flex;
-  font-size: 30px;
-  align-items: center;
-  justify-content: center;
 }
