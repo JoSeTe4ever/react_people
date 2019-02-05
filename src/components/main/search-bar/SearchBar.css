@@ -2,6 +2,7 @@
     width: 20%;
     position: relative;
     display: inline-block;
+    margin-top: 20px;
 }
 
 .searchTerm {
