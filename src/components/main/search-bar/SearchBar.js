@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Button from '@material-ui/core/Button';
 import './SearchBar.css'
 
 class SearchBar extends Component {
@@ -14,11 +15,7 @@ class SearchBar extends Component {
                     <input className="searchTerm"
                            placeholder={this.props.placeholder}
                            value={this.state.searchTerm}
-                           onChange={event => this.onInputChange(event.target.value)}
-                    />
-                    <button type="submit" className="searchButton">
-                        <i className="fa fa-search"></i>
-                    </button>
+                           onChange={event => this.onInputChange(event.target.value)}/>
                 </div>
             </div>
         );

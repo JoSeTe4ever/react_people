@@ -11,36 +11,12 @@ class Header extends Component {
 
     static defaultProps = {}
 
-    componentWillMount() {
-    }
-
-    componentWillReceiveProps(nextProps) {
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-    }
-
     render() {
         return (
             <header className="navbar">
-                <h3>This is my header element</h3>
+                <h3>Sandbox application</h3>
             </header>
         );
-    }
-
-    componentDidMount() {
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-    }
-
-    componentWillUnmount() {
-    }
-
-    componentDidCatch(error, info) {
     }
 }
 

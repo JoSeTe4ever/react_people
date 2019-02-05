@@ -3,6 +3,7 @@ import './Main.css'
 import peopleData from './../../data/peopleData';
 import Person from "./person-card/Person";
 import SearchBar from "./search-bar/SearchBar";
+import CreatePersonDialogue from "./create-dialog/CreatePersonDialogue";
 
 class Main extends Component {
     constructor(props) {
@@ -14,27 +15,14 @@ class Main extends Component {
 
     static defaultProps = {};
 
-    componentWillMount() {
-    }
-
-    componentWillReceiveProps(nextProps) {
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-    }
-
     render() {
-
         this.peopleCardsComponents = this.state.people.map(person => <Person person={person}
                                                                              key={person._id}
                                                                              handleCheckboxChange={this.handleCheckboxChange}/>);
         return (
             <div>
-                <h3>This is my main element</h3>
                 <SearchBar placeholder="Type here" onSearchTermChange={term => this.filterPeople(term)}/>
+                <CreatePersonDialogue/>
                 <div className="container">
                     <div className="peopleDataContainer">
                         {this.peopleCardsComponents.slice(0, 5)}
@@ -45,18 +33,6 @@ class Main extends Component {
                 </div>
             </div>
         );
-    }
-
-    componentDidMount() {
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-    }
-
-    componentWillUnmount() {
-    }
-
-    componentDidCatch(error, info) {
     }
 
     handleCheckboxChange(id) {
@@ -73,7 +49,18 @@ class Main extends Component {
         });
     }
 
-    filterPeople() {
+    filterPeople(term) {
+        if (!term) {
+            this.setState(prevState => {
+                return {people: peopleData, favouritePeople: prevState.favouritePeople};
+            });
+        }
+        else {
+            this.setState(prevState => {
+                const selectedElems = prevState.people.filter((elem) => elem.name.toLowerCase().indexOf(term.toLowerCase()) !== -1);
+                return {people: selectedElems, favouritePeople: prevState.favouritePeople};
+            });
+        }
     }
 }
 
