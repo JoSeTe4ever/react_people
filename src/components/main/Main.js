@@ -8,7 +8,7 @@ import CreatePersonDialogue from "./create-dialog/CreatePersonDialogue";
 class Main extends Component {
     constructor(props) {
         super(props);
-        this.state = {people: peopleData, favouritePeople: []};
+        this.state = {people: props.peopleData, favouritePeople: []};
         this.filterPeople = this.filterPeople.bind(this);
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     };
@@ -33,6 +33,9 @@ class Main extends Component {
 
                     <div className="peopleDataContainer">
                         {this.peopleCardsComponents.slice(10, 15)}
+                    </div>
+                    <div className="peopleDataContainer">
+                        {this.peopleCardsComponents.slice(15, 20)}
                     </div>
                 </div>
             </div>

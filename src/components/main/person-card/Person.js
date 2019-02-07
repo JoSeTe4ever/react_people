@@ -12,9 +12,15 @@ class Person extends React.Component {
 
     render(props) {
         const {person} = this.props;
+        let imgSrc;
+        if (!person.picture) {
+            imgSrc = "https://api.adorable.io/avatars/66/asbott2@adorable.png";
+        } else {
+            imgSrc = person.picture;
+        }
         return (
             <div className="card">
-                <img src={person.picture} alt="Avatar" className={"dynamicAvatar"}/>
+                <img src={imgSrc} alt="Avatar" className={"dynamicAvatar"}/>
                 <div className="container">
                     <h4><b>{person.name}</b></h4>
                     <p>{person.address}</p>
@@ -40,8 +46,8 @@ const personShape = PropTypes.shape({
 
 });
 
-Person.propTypes ={
-    person : personShape
+Person.propTypes = {
+    person: personShape
 };
 
 
