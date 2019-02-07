@@ -30,6 +30,10 @@ class Main extends Component {
                     <div className="peopleDataContainer">
                         {this.peopleCardsComponents.slice(5, 10)}
                     </div>
+
+                    <div className="peopleDataContainer">
+                        {this.peopleCardsComponents.slice(10, 15)}
+                    </div>
                 </div>
             </div>
         );
