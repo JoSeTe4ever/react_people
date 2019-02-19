@@ -25,17 +25,7 @@ class Main extends Component {
                 <CreatePersonDialogue/>
                 <div className="container">
                     <div className="peopleDataContainer">
-                        {this.peopleCardsComponents.slice(0, 5)}
-                    </div>
-                    <div className="peopleDataContainer">
-                        {this.peopleCardsComponents.slice(5, 10)}
-                    </div>
-
-                    <div className="peopleDataContainer">
-                        {this.peopleCardsComponents.slice(10, 15)}
-                    </div>
-                    <div className="peopleDataContainer">
-                        {this.peopleCardsComponents.slice(15, 20)}
+                        {this.peopleCardsComponents}
                     </div>
                 </div>
             </div>

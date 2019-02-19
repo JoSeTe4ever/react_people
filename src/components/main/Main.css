@@ -2,13 +2,15 @@
 .peopleDataContainer{
     background-color: white;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    padding: 30px;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto auto);
 }
 
 @media screen and (max-width: 1000px) {
     .peopleDataContainer {
+        display: flex;
         flex-direction: column;
     }
 }
