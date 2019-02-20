@@ -1,6 +1,9 @@
-This is a basic project for learning the react fundamentals
+This is a basic project for learning the react fundamentals, a list of people is shown, 
+and it is displayed using css-grid properties, and a search box filter functionality is there, 
+as well as a create person button to add and list a new person.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+![alt text](public/sandbox.jpg)
 
 ## Available Scripts
 
