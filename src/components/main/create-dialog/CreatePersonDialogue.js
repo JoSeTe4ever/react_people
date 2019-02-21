@@ -41,7 +41,8 @@ class CreatePersonDialogue extends Component {
 
     close() {
         this.setState({open: false});
-        peopleData.push(this.state)
+        peopleData.push(this.state);
+        this.props.updatePeople();
     };
 
     render() {

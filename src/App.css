@@ -38,14 +38,3 @@
 p.todo-description {
   display: inline;
 }
-
-h3.app-footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: purple;
-  color: white;
-  text-align: center;
-}
-

@@ -22,7 +22,7 @@ class Main extends Component {
         return (
             <div>
                 <SearchBar placeholder="Type here" onSearchTermChange={term => this.filterPeople(term)}/>
-                <CreatePersonDialogue/>
+                <CreatePersonDialogue updatePeople={() => this.filterPeople("")}/>
                 <div className="container">
                     <div className="peopleDataContainer">
                         {this.peopleCardsComponents}
