@@ -8,7 +8,7 @@ import CreatePersonDialogue from "./create-dialog/CreatePersonDialogue";
 class Main extends Component {
     constructor(props) {
         super(props);
-        this.state = {people: props.peopleData, favouritePeople: []};
+        this.state = {people: peopleData, favouritePeople: []};
         this.filterPeople = this.filterPeople.bind(this);
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     };

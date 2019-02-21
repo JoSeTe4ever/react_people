@@ -42,6 +42,8 @@ class CreatePersonDialogue extends Component {
     close() {
         this.setState({open: false});
         peopleData.push(this.state);
+        //restart state for clearing the form
+        this.setState({});
         this.props.updatePeople();
     };
 
