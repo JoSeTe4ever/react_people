@@ -7,7 +7,7 @@ as well as a create person button to add and list a new person.
 
 ## Available Scripts
 
-In the project directory (where the package-lock.json is), you can run:
+In the project directory (where the package-lock.json is), you can run the following commands, but please execute npm install previously:
 
 ### `npm start`
 
