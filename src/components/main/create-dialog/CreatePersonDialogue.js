@@ -27,6 +27,7 @@ class CreatePersonDialogue extends Component {
         };
         this.handleClose = this.close.bind(this);
         this.handleChangeField = this.changeField.bind(this);
+        this.handleSave = this.save.bind(this);
     }
 
     changeField(event){
@@ -39,7 +40,11 @@ class CreatePersonDialogue extends Component {
         this.setState({open: true});
     };
 
-    close() {
+    close(){
+        this.setState({open: false});
+    }
+
+    save() {
         this.setState({open: false});
         peopleData.push(this.state);
         //restart state for clearing the form
@@ -97,8 +102,8 @@ class CreatePersonDialogue extends Component {
                         <Button onClick={this.handleClose} color="primary">
                             Cancel
                         </Button>
-                        <Button onClick={this.handleClose} color="primary">
-                            Subscribe
+                        <Button onClick={this.handleSave} color="primary">
+                            Save
                         </Button>
                     </DialogActions>
                 </Dialog>
