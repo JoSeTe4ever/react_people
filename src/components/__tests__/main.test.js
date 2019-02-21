@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 
 import Main from '../main/Main';
 
@@ -131,5 +131,18 @@ describe('Main component', () => {
 
         //Assert
         expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should filter the people data depending on what is written on the searchbox', () => {
+        //Arrange
+        const application = mount(<Main/>);
+
+        //Act
+        const usernameInput = application.find('.searchTerm');
+        usernameInput.instance().value = "z";
+        usernameInput.simulate('change');
+
+        //Assert
+        expect(application.find('h4').text()).toBe("Luz Aguilar");
     });
 });
