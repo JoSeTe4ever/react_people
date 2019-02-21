@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Person component should render correctly with specific props 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt="Avatar"
+    className="dynamicAvatar"
+    src="https://api.adorable.io/avatars/66/lacynguyen@nutralab.com"
+  />
+  <div
+    className="container"
+  >
+    <h4>
+      <b>
+        Jopi Piqueras
+      </b>
+    </h4>
+    <p>
+      Smin Streen 78373
+    </p>
+    <WithStyles(Checkbox) />
+  </div>
+</div>
+`;
